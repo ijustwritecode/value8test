@@ -214,7 +214,7 @@ export default function Today() {
         </div>
       </div>
       <div className="today">
-        <div className="text-block">Today's Highlights</div>
+        <div className="text-block">Today&apos;s Highlights</div>
         <div className="w-layout-grid grid">
           <div
             id="w-node-_28824305-fc14-592b-fc33-739162a2d460-40296aab"
