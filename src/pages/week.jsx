@@ -40,7 +40,7 @@ export default function Week() {
             className="search-button w-button"
           />
         </form>
-        <a href="#" className="link-block w-inline-block">
+        <Link href="#" className="link-block w-inline-block">
           <Image
             src="target.svg"
             loading="lazy"
@@ -49,7 +49,7 @@ export default function Week() {
             alt=""
             className="image"
           />
-        </a>
+        </Link>
         <Image
           src="close-square-svgrepo-com.svg"
           loading="lazy"
@@ -117,25 +117,25 @@ export default function Week() {
             className="image-6"
           />
           <div className="menu-wrapper">
-            <a
+            <Link
               href="/"
               aria-current="page"
               className="link"
             >
               Today
-            </a>
-            <a href="week" className="link  w--current">
+            </Link>
+            <Link href="week" className="link  w--current">
               Week
-            </a>
+            </Link>
           </div>
         </div>
         <div className="button-wrap">
-          <a href="#" className="link-block black-bg w-inline-block">
+          <Link href="#" className="link-block black-bg w-inline-block">
             <div className="celcius">°C</div>
-          </a>
-          <a href="#" className="link-block white-bg w-inline-block">
+          </Link>
+          <Link href="#" className="link-block white-bg w-inline-block">
             <div className="celcius black">°F</div>
-          </a>
+          </Link>
           <div
             data-hover="false"
             data-delay={0}
@@ -143,31 +143,31 @@ export default function Week() {
           >
             <div className="dropdown-toggle w-dropdown-toggle" />
             <nav className="dropdown-list w-dropdown-list">
-              <a href="#" className="settings w-dropdown-link">
+              <Link href="#" className="settings w-dropdown-link">
                 Settings
-              </a>
-              <a href="#" className="settings w-dropdown-link">
+              </Link>
+              <Link href="#" className="settings w-dropdown-link">
                 Switch Account
-              </a>
-              <a href="#" className="settings w-dropdown-link">
+              </Link>
+              <Link href="#" className="settings w-dropdown-link">
                 Logout
-              </a>
+              </Link>
             </nav>
           </div>
         </div>
       </div>
       <div className="menu-mobile">
         <div className="menu-wrap mobile">
-          <a
+          <Link
             href="/"
             aria-current="page"
             className="link"
           >
             Today
-          </a>
-          <a href="week" className="link mobile w--current">
+          </Link>
+          <Link href="week" className="link mobile w--current">
             Week
-          </a>
+          </Link>
         </div>
       </div>
       <div className="div-block-6">
