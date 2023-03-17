@@ -1,12 +1,37 @@
 import Image from "next/image";
 import React, { Component } from "react";
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import ErrorBoundary from "../utils/ErrorBoundary";
+import Location from "../components/Location";
+import CurrentTemp from "../components/CurrentTemp";
+import { useLocation } from "../contexts/LocationProvider";
+import {
+  useWeatherData,
+  getWeatherCondition,
+} from "../contexts/WeatherDataProvider";
+import WeatherStat from "../components/WeatherStat";
+import { parseTime, getCurrentDateTime } from "../utils/Hooks";
 import styles from "@/styles/Home.module.css";
 
 
 export default function Today() {
+  const { location } = useLocation();
+  const { weatherData } = useWeatherData();
+  const [dateTime, setDateTime] = useState(getCurrentDateTime());
+  const { condition } = getWeatherCondition(
+    weatherData?.current_weather?.weathercode
+  );
+  const clock = () => {
+    setDateTime(getCurrentDateTime());
+  };
+  useEffect(() => {
+    const interval = setInterval(clock, 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  });
 
   useEffect(()=>{
     window.Webflow && window.Webflow.destroy();
