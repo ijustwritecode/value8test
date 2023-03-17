@@ -42,6 +42,30 @@ export default function Today() {
 
 
     return (
+      <ErrorBoundary
+      fallback={
+        <h1
+          data-aos="zoom-in"
+          data-aos-duration="250"
+          data-aos-easing="ease-in-out"
+          className="text-center"
+        >
+          Error getting weather data.
+        </h1>
+      }
+    >
+      <Suspense
+        fallback={
+          <h1
+            data-aos="zoom-in"
+            data-aos-duration="250"
+            data-aos-easing="ease-in-out"
+            className="text-center"
+          >
+            Loading current weather...
+          </h1>
+        }
+      >
         <>
           <div className="wrap">
             <div className="left">
@@ -103,6 +127,7 @@ export default function Today() {
                   12<sup>°C</sup>
                 </div>
                 <div className="date-time">
+                  <WeatherStat />
                   Monday, <span className="text-span">16.00</span>
                 </div>
               </div>
@@ -116,7 +141,10 @@ export default function Today() {
                     height={32}
                     className="image-4"
                   />
-                  <div className="text-block-9">Mostly Cloudy</div>
+                  <div className="text-block-9">
+                    <WeatherStat />
+                    Mostly Cloudy
+                    </div>
                 </div>
                 <div className="div-block-2">
                   <Image
@@ -131,7 +159,10 @@ export default function Today() {
                 </div>
               </div>
               <div className="div-block-3">
-                <div className="region">New York, NY, USA</div>
+                <div className="region">
+                  <Location />
+                  New York, NY, USA
+                  </div>
               </div>
             </div>
             <div className="right">
@@ -356,6 +387,7 @@ export default function Today() {
             </div>
           </div>
         </>
-
+        </Suspense>
+        </ErrorBoundary>
     );
 }
