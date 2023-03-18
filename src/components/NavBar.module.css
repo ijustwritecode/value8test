@@ -128,3 +128,9 @@
     
 }
      
+@media screen and (max-width: 400px) {
+    
+    .search button.search_text{
+        width: 65%;
+    }
+}
