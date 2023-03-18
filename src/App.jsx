@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css'
 import "./Loading.css"
 
@@ -14,7 +14,12 @@ const API_KEY = import.meta.env.VITE_URL_KEY;
 
 function App() {
 
-  
+  useEffect(()=>{
+    window.Webflow && window.Webflow.destroy();
+    window.Webflow && window.Webflow.ready();
+    window.Webflow && window.Webflow.require('ix2').init();
+    document.dispatchEvent(new Event('readystatechange'))
+  });
 
   const [DadosNome, setDadosName] = useState("Nairobi");
   const [userLocation, setUserLocation] = useState(null);
@@ -86,7 +91,7 @@ function App() {
       {
         !loading && (
           <>
-          <div className="PanelLeft">
+          <div className="left">
             <NavBar
               temp={unit}
               userLocationClick={handleCurrentLocationClick} 
@@ -99,7 +104,7 @@ function App() {
             }
           </div>
 
-          <div className="daysFollowing container">
+          <div className="right">
 
             <div className="buttons-temp flex">
               <div className='hamburger'>
@@ -116,6 +121,24 @@ function App() {
               <div className='button-wrap'>
               <button onClick={() => setUnit("celsius")}>°C</button>
               <button onClick={() => setUnit("fahrenheit")}>°F</button>
+              <div
+                    data-hover="false"
+                    data-delay={0}
+                    className="dropdown w-dropdown"
+                  >
+                    <div className="dropdown-toggle w-dropdown-toggle" />
+                    <nav className="dropdown-list w-dropdown-list">
+                      <a href="#" className="settings w-dropdown-link">
+                        Settings
+                      </a>
+                      <a href="#" className="settings w-dropdown-link">
+                        Switch Account
+                      </a>
+                      <a href="#" className="settings w-dropdown-link">
+                        Logout
+                      </a>
+                    </nav>
+                  </div>
               </div>
               
             </div>

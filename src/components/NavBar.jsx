@@ -79,6 +79,15 @@ const NavBar = ({dados, onLocationClick, userLocationClick, temp}) => {
                 <button onClick={userLocationClick} className={style.curso_location}>
                     <BiCurrentLocation/>
                 </button>
+                <img
+                  src="close-square-svgrepo-com.svg"
+                  loading="lazy"
+                  data-w-id="79993b50-2b34-abd7-5ba5-5f44203bcbc5"
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="image-6 close"
+                />
                 </div>
 
             <div className={style.img_weather}>
