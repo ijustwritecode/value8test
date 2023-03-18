@@ -1,4 +1,4 @@
-# value8test
+## value8test
 
 The web app has the fololowing features:
 
@@ -8,7 +8,7 @@ The web app has the fololowing features:
 ### Ability to switch between units celsius and fahrenheit.
 ### Used Vitejs to improve server start time.
 
-##Technologies
+## Technologies
 
 - [React](https://react.dev/)
 - [Vite](https://vitejs.dev/)
