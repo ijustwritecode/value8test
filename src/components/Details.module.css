@@ -1,0 +1,34 @@
+.details_card{
+    flex: calc(30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: .8rem;
+    /* max-width: 350px; */
+    min-height: 270px;
+    text-align: center;
+    color: #000;
+    background-color: var(--colorBackground);
+    border-radius: 20px;
+}
+
+.details_card:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#c4c3c3), to(#fff));
+    background-image: linear-gradient(180deg, #c4c3c3, #fff);
+  }
+
+.details_card h2{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.details_card p {
+    font-size: 5rem;
+}
+
+.details_card p span{
+    color: #6e707a;
+    font-size: 2rem;
+}
