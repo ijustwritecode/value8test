@@ -6,9 +6,10 @@
     left: 0;
     width: 100%;
     padding: 1rem 2rem;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background-color: var(--colorBackground);
     z-index: 9999;
+    border-radius: 50px;
 }
 
 .Search button.close{
@@ -20,7 +21,7 @@
 }
 
 .Search button svg path{
-    stroke: #fff;
+    stroke: #000;
 }
 
 .Search form {
@@ -32,7 +33,7 @@
 .Search form label{
     max-width: 250px;
     padding: .7rem 1rem;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,7 +51,7 @@
     background: none;
     font-size: 1rem;
     outline: none;
-    color: #fff;
+    color: #000;
 }
 
 form label input::placeholder{
@@ -61,12 +62,12 @@ form input[type=submit]{
     cursor: pointer;
     height: 100%;
     font-size: 1rem;
-    background-color: #3c47e9;
+    background-color: #f7f6f9;
     border: none;
     outline: none;
     padding: .9rem .8rem;
     margin-left: 1rem;
-    color: #ffff;
+    color: #000;
 }
 
 .list{
@@ -78,7 +79,7 @@ form input[type=submit]{
 }
 
 .list p{
-    color: #fff;
+    color: #000;
 }
 
 .nameLocation{
@@ -86,8 +87,8 @@ form input[type=submit]{
     cursor: pointer;
     background: none;
     text-align: left;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid #000;
+    color: #000;
     padding: 1rem;
     margin-top: 1rem;
     font-size: 1rem;

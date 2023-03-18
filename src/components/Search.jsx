@@ -35,7 +35,7 @@ const Search = ({onClose, onLocationClick}) => {
                 onChange={(e) => setSearchTerm(e.target.value)} />
             </label>
 
-            <input type="submit" value="pesquisar" />
+            <input type="submit" value="Search" />
         </form>
 
         <div className={style.list}>

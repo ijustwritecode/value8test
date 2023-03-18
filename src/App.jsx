@@ -11,9 +11,12 @@ import { useFetch } from './hook/useFetch';
 const API_URL = import.meta.env.VITE_URL;
 const API_KEY = import.meta.env.VITE_URL_KEY;
 
+
 function App() {
 
-  const [DadosNome, setDadosName] = useState("Paris");
+  
+
+  const [DadosNome, setDadosName] = useState("Nairobi");
   const [userLocation, setUserLocation] = useState(null);
   const [unit, setUnit] = useState("celsius");
 
@@ -73,7 +76,7 @@ function App() {
   console.log(userLocation);
 
   return (
-    <div className="App flex">
+    <div className="App">
       {loading && (
         <div className="container-loading">
           <LoadingIndicator />
@@ -99,15 +102,29 @@ function App() {
           <div className="daysFollowing container">
 
             <div className="buttons-temp flex">
+              <div className='hamburger'>
+                <img
+                        src="menu-hamburger-svgrepo-com.svg"
+                        loading="lazy"
+                        data-w-id="6cd9c47c-60a0-7b39-5ae3-20132817d402"
+                        alt=""
+                        width={24}
+                        height={24}
+                        className="image-6"
+                />
+              </div>
+              <div className='button-wrap'>
               <button onClick={() => setUnit("celsius")}>°C</button>
               <button onClick={() => setUnit("fahrenheit")}>°F</button>
+              </div>
+              
             </div>
 
             <ListDays temp={unit} dados={days}/>
 
             <div className="details">
 
-              <h2>Today's Details</h2>
+              <h2>Today's Highlights</h2>
               <Details dados={data}/>
             </div>
 

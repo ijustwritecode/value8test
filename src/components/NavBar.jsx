@@ -92,11 +92,11 @@ const NavBar = ({dados, onLocationClick, userLocationClick, temp}) => {
                       <span>{temp === "celsius" ? "°C" : "°F"}</span>
                     </h2>
 
-                    <p>{dados.current.condition.text}</p>
-
                     <div className={style.day}>
                         <p>Today</p>
                     </div>
+                    
+                    <p>{dados.current.condition.text}</p>
 
                     <div className={style.location}>
                         <MdLocationOn/>

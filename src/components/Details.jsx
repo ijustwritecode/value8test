@@ -27,6 +27,14 @@ const Details = ({dados}) => {
                         <h2>Air Pressure</h2>
                         <p>{dados.current.pressure_in}<span>in</span></p>
                     </div>
+                    <div className={style.details_card}>
+                        <h2>Air Pressure</h2>
+                        <p>{dados.current.pressure_in}<span>in</span></p>
+                    </div>
+                    <div className={style.details_card}>
+                        <h2>Air Pressure</h2>
+                        <p>{dados.current.pressure_in}<span>in</span></p>
+                    </div>
 
                 </>
             )
